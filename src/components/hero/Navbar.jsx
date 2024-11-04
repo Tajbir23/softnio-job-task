@@ -15,7 +15,7 @@ const Navbar = () => {
     </ul>
   return (
     <div>
-    <div className="py-5 flex items-center justify-between lg:mx-36 mx-5 sticky top-0 z-50 bg-transparent">
+    <div className="py-5 flex items-center justify-between lg:mx-48 mx-5 sticky top-0 z-50 bg-transparent">
         <div className="flex items-center gap-10 text-white">
             <div className="flex items-center gap-2">
                 <img src={logo} alt="" className="w-[40px] h-[40px]" />
