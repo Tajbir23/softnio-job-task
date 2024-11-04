@@ -1,6 +1,11 @@
-
+import { IoMdMenu } from "react-icons/io"
+import logo from "../../assets/hotelIcon.svg"
+import { useState } from "react"
+import Button from "../../ui/Button"
 const Navbar = () => {
-    const navMenu = <ul className="flex gap-4 ">
+    const [open, setOpen] = useState(false)
+
+    const navMenu = <ul className="flex gap-4 lg:flex-row flex-col">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Portfolio</a></li>
@@ -9,10 +14,11 @@ const Navbar = () => {
         <li><a href="#">Contact</a></li>
     </ul>
   return (
+    <div>
     <div className="py-5 flex items-center justify-between lg:mx-36 mx-5 sticky top-0 z-50 bg-transparent">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-10 text-white">
             <div className="flex items-center gap-2">
-                <img src="/src/assets/hotelIcon.svg" alt="" />
+                <img src={logo} alt="" className="w-[40px] h-[40px]" />
                 <h1 className="text-[28px]"><span className="font-semibold">Restau</span><span>rant</span></h1>
             </div>
 
@@ -21,7 +27,13 @@ const Navbar = () => {
             </nav>
 
         </div>
-        <button className="bg-[#FEBF00] font-bold text-[16px] px-5 py-2 hidden lg:block">BOOK A TABLE</button>
+        <Button className="hidden lg:block" >BOOK A TABLE</Button>
+        <IoMdMenu onClick={() => setOpen(!open)} className="text-[28px] lg:hidden text-white cursor-pointer" />
+    </div>
+        <div className={`${open ? "flex" : "hidden"} lg:hidden flex-col gap-4 right-5 w-full p-5 text-center`}>
+            {navMenu}
+            <Button className="w-max m-auto">BOOK A TABLE</Button>
+        </div>
     </div>
   )
 }
