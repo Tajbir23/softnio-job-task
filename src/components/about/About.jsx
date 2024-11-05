@@ -8,12 +8,13 @@ import ContactTab from './ContactTab'
 import fastDelivery from './../../assets/about/fastDelivery.svg'
 import absoluteDinning from './../../assets/about/absoluteDinning.svg'
 import pickupDelivery from './../../assets/about/pickupDelivery.svg'
+import aboutSideImage from './../../assets/image2.png'
 
 const About = () => {
     const [tab, setTab] = useState('about')
   return (
-    <div className='lg:mx-48 mx-5 lg:py-28 py-5 min-h-[calc(100vh-75px)]'>
-        <div className='flex flex-col gap-20'>
+    <div className='relative'>
+        <div className='flex flex-col gap-20 lg:mx-48 mx-5 lg:py-28 py-5 min-h-[calc(100vh-75px)] '>
             <div className='flex gap-20 lg:justify-between lg:flex-row flex-col'>
                 <div className='relative lg:w-1/2'>
                     <img src={aboutImage} alt="image" />
@@ -69,6 +70,8 @@ const About = () => {
 
             </div>
         </div>
+
+        <img src={aboutSideImage} alt='' className='absolute right-0 bottom-40 h-1/3 hidden lg:block' />
     </div>
   )
 }
