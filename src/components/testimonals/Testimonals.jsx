@@ -6,6 +6,8 @@ import chiken from './../../assets/popular food/chiken.png';
 import TestimonalCard from "./TestimonalCard";
 import { useCallback, useEffect, useState } from "react";
 import image1 from "./../../assets/popular food/image1.png"
+import Title from "../../ui/Title";
+import Text from "../../ui/Text";
 
 const Testimonals = () => {
     const foods = [
@@ -99,13 +101,10 @@ const Testimonals = () => {
     return (
         <div className="bg-orange-50 relative">
             <div className="lg:mx-48 mx-5 lg:py-28 py-5">
-                <div className="flex gap-2 items-center">
-                    <div className="h-2 w-2 bg-[#BD1F17]"></div>
-                    <h1 className="text-[#BD1F17] font-bold font-roboto text-lg">Crispy, Every Bite Taste</h1>
-                </div>
+                <Text>Crispy, Every Bite Taste</Text>
 
                 <div className="mt-2 flex justify-between items-center">
-                    <h1 className="font-bebas lg:text-6xl text-4xl">POPULAR FOOD ITEMS</h1>
+                    <Title>POPULAR FOOD ITEMS</Title>
                     <div className="flex items-center gap-5">
                         <div onClick={handlePrev} className="h-10 w-10 rounded-full shadow-md flex items-center justify-center cursor-pointer bg-white">
                             <MdKeyboardArrowLeft className="text-3xl" />
