@@ -3,6 +3,8 @@ import Carousel from "../../ui/Carousel";
 import reviewImage from "./../../assets/review/review.png"
 import customerProfile from "./../../assets/review/customerProfile.png"
 import ReviewCard from "./ReviewCard";
+import bgImage2 from "./../../assets/review/bgImage2.svg"
+import bgImage3 from "./../../assets/review/bgImage3.svg"
 
 
 const CustomerReviews = () => {
@@ -106,6 +108,8 @@ const CustomerReviews = () => {
           {testimonials.map((testimonial) => <ReviewCard key={testimonial.id} testimonial={testimonial} currentIndex={currentIndex} className="w-full flex-shrink-0 px-4 transition-transform duration-300 ease-in-out " />)}
         </div>
       </Carousel>
+      <img src={bgImage2} alt="" className="absolute top-24 left-0 hidden lg:block" />
+      <img src={bgImage3} alt="" className="absolute bottom-16 right-0 h-80 hidden lg:block" />
     </div>
   )
 }
