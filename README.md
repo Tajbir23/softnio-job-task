@@ -24,7 +24,6 @@ This project is a pixel-perfect, responsive web application built by converting 
 3. **Tabs in About Section** - Working tabs switch between various content sections.
 4. **Autoplay Carousel** - Displays content with looping and autoplay functionality.
 5. **Sliding Testimonials** - Testimonials are presented in a slider for smooth transition.
-6. **Functional Form** - Simple form with basic validation for user inputs.
 
 ## 🚀 Getting Started
 

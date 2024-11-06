@@ -1,4 +1,3 @@
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import burger from './../../assets/popular food/burger.png';
 import pizza from './../../assets/popular food/pizza.png';
 import frenchFrie from './../../assets/popular food/frenchFrie.png';
@@ -6,8 +5,7 @@ import chiken from './../../assets/popular food/chiken.png';
 import TestimonalCard from "./TestimonalCard";
 import { useCallback, useEffect, useState } from "react";
 import image1 from "./../../assets/popular food/image1.png"
-import Title from "../../ui/Title";
-import Text from "../../ui/Text";
+import Carousel from "../../ui/Carousel";
 
 const Testimonals = () => {
     const foods = [
@@ -99,30 +97,16 @@ const Testimonals = () => {
       },[handleNext])
 
     return (
+        
         <div className="bg-orange-50 relative">
-            <div className="lg:mx-48 mx-5 lg:py-28 py-5">
-                <Text>Crispy, Every Bite Taste</Text>
-
-                <div className="mt-2 flex justify-between items-center">
-                    <Title>POPULAR FOOD ITEMS</Title>
-                    <div className="flex items-center gap-5">
-                        <div onClick={handlePrev} className="h-10 w-10 rounded-full shadow-md flex items-center justify-center cursor-pointer bg-white">
-                            <MdKeyboardArrowLeft className="text-3xl" />
-                        </div>
-                        <div onClick={handleNext} className="h-10 w-10 rounded-full shadow-md flex items-center justify-center cursor-pointer bg-white">
-                            <MdKeyboardArrowRight className="text-3xl" />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mt-8 relative overflow-hidden">
-                    <div className="flex">
+            <Carousel text="Crispy, Every Bite Taste" title="POPULAR FOOD ITEMS" handleNext={handleNext} handlePrev={handlePrev}>
+            <div className="flex">
                         {foods.map(food => <TestimonalCard key={food.id} food={food} currentIndex={currentIndex} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 px-4 transition-transform duration-300 ease-in-out ' />)}
                     </div>
-                </div>
-            </div>
+            </Carousel>
             <img src={image1} alt="image" className="absolute top-[30%] h-96 hidden lg:block" />
         </div>
+        
     );
 };
 
