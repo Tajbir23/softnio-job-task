@@ -5,6 +5,7 @@ import frenchFrie from './../../assets/popular food/frenchFrie.png';
 import chiken from './../../assets/popular food/chiken.png';
 import TestimonalCard from "./TestimonalCard";
 import { useCallback, useEffect, useState } from "react";
+import image1 from "./../../assets/popular food/image1.png"
 
 const Testimonals = () => {
     const foods = [
@@ -96,8 +97,8 @@ const Testimonals = () => {
       },[handleNext])
 
     return (
-        <div className="bg-orange-50">
-            <div className="lg:mx-48 mx-5 lg:py-28 py-5 overflow-hidden relative">
+        <div className="bg-orange-50 relative">
+            <div className="lg:mx-48 mx-5 lg:py-28 py-5">
                 <div className="flex gap-2 items-center">
                     <div className="h-2 w-2 bg-[#BD1F17]"></div>
                     <h1 className="text-[#BD1F17] font-bold font-roboto text-lg">Crispy, Every Bite Taste</h1>
@@ -121,6 +122,7 @@ const Testimonals = () => {
                     </div>
                 </div>
             </div>
+            <img src={image1} alt="image" className="absolute top-[30%] h-96 hidden lg:block" />
         </div>
     );
 };
