@@ -5,7 +5,7 @@ import Title from "../../ui/Title"
 
 const BookingForm = () => {
   return (
-    <div className={`bg-[url("/src/assets/booking/image.png")] bg-no-repeat bg-cover`}>
+    <div className={`bg-[url("/src/assets/booking/image.png")] bg-no-repeat bg-cover bg-center`}>
         <div className="lg:mx-48 mx-5 lg:py-28 py-5 flex justify-between">
             <div className="flex flex-col gap-5 lg:w-1/2">
                 <Text>Book Now</Text>
